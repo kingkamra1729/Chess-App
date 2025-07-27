@@ -1,9 +1,13 @@
 # Chess-App
 
 **ChessBot Prototype**
+
 A browser-based chess game built using plain HTML, CSS, and JavaScript — no frameworks or modules.
 
+
 **Features**
+
+
   Player vs Player and Player vs Bot modes
   
   Custom bot using minimax with alpha-beta pruning
@@ -14,7 +18,10 @@ A browser-based chess game built using plain HTML, CSS, and JavaScript — no fr
   
   Safe move filtering for king legality
 
+
 **Roadmap**
+
+
   Stronger evaluation for the bot
   
   Online multiplayer support
