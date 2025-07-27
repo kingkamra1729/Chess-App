@@ -1,4 +1,6 @@
 # Chess-App
+**Group Project by Liyam Kamra and Parth Malik**
+**Accessible only with local hosts like local server**
 
 **ChessBot Prototype**
 
