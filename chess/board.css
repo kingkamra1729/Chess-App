@@ -1,0 +1,95 @@
+.chessboard {
+  display: grid;
+  grid-template: repeat(8,1fr) / repeat(8,1fr);
+  width: 600px;
+  height: 600px;
+  border: 10px solid #3e2006;
+  margin: auto;
+  position: relative;
+}
+
+.square {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color:#3e2006;
+  border: 1px solid #3e2006;
+  position: relative;
+
+}
+
+.white {
+  background-color: #f0d9b5; 
+}
+
+.black {
+  background-color: #b58863; 
+}
+
+.label_{
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  font-size: 12px;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; 
+}
+.label{
+  position: absolute;
+  font-size: 12px;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; 
+}
+
+.piece {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.piece-svg {
+  display: none;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; 
+}
+.dragging {
+  filter: drop-shadow(0 0 5px yellow);
+  
+}
+.hidden {
+  display: none;
+}
+button {
+  padding: 4px 8px;
+  font-size: 12px;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  margin: 4px;
+    display: flex;
+  flex-direction: column;
+  background-color: blue;
+}
+
+.promotion_black, .promotion_white {
+
+  
+ width: inherit;
+ height: inherit;
+ 
+  cursor: pointer;
+  display: none;
+  background-color: yellow;
+}
+.promotion svg{
+  height: 50px;
+  width: 50px;
+}
+
+

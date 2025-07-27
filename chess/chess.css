@@ -1,0 +1,213 @@
+/*menue styles*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-bg: #e1e1e1;
+    --color-text: #212121;
+    --color-tertiary: #fa87df;
+    --shadow: 6px 6px 12px #bababa, -6px -6px 12px #ffffff;
+    --inner-shadow: inset 6px 6px 12px #bababa, inset -6px -6px 12px #ffffff;
+}
+
+.navbar{
+    display: flex;
+    gap: 12px;
+    position: relative;
+    width: 100%;
+    height: 75px;
+    background-color: #2b2937;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.navtitle{
+    color: var(--color-tertiary);
+    justify-content: centre;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 110px;
+    font-size: 60px;
+    font-weight: bold;
+}
+.navtitle:hover {
+  color: var(--color-text);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar img{
+    border-radius: 50%;
+    margin-left: 0px;
+    transition: all 0.4s ease;
+}
+
+#darktheme{
+    border: #212121 solid 4px;
+    box-shadow: 6px 6px 12px #4d4d52, -6px -6px 12px #4d4d52;
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    padding: 4px 4px 22px 3px;
+    border-radius: 25%;
+    position: absolute;
+    right: 55px;
+    top: 25%;
+}
+
+#menue-btn{
+    border: #212121 solid 4px;
+    box-shadow: 6px 6px 12px #4d4d52, -6px -6px 12px #4d4d52;
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    padding: 4px 4px 22px 3px;
+    border-radius: 25%;
+    position: absolute;
+    right: 10px;
+    top: 25%;
+}
+
+#menue-btn:hover, #darktheme:hover{
+    box-shadow: var(--inner-shadow);
+    background-color: var(--color-tertiary);
+    fill: var(--color-text);
+}
+
+.navbar img:hover {
+  filter: blur(0.25px) brightness(1.1) saturate(1.2);
+  transform: scale(1.05);
+}
+.play-time{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    width: 270px;
+    z-index: 1;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.play-time:hover .container:not(:hover){
+    filter: blur(1px);
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: var(--color-bg);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.container:hover{
+    transform: scale(1.05) translateY(-10px);
+    filter: brightness(1.1) saturate(1.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    transition: background 0.3s ease;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.container:hover::before {
+  background: rgba(250, 135, 223, 0.12);
+}
+
+.container img {
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
+
+/*board styles*/
+.chessboard {
+  display: grid;
+  grid-template: repeat(8,1fr) / repeat(8,1fr);
+  width: 560px;
+  height: 560px;
+  border: 10px solid #3e2006;
+  margin: auto;
+}
+
+.square {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color:#3e2006;
+  border: 1px solid #3e2006;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; 
+}
+
+.white {
+  background-color: #f0d9b5; 
+}
+
+.black {
+  background-color: #b58863; 
+}
+
+.label_{
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  font-size: 12px;
+}
+
+.piece {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.piece-svg {
+  display: none;
+}
+
+/* chessboard styles */
+.board {
+position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  z-index: 0;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 100px;
+  left: -12%;
+}
+
+body {
+    overscroll-behavior: none;
+}
